@@ -1,6 +1,6 @@
 1.
 
-```c
+
 #include <stdio.h>
 
 int main() {
@@ -17,11 +17,11 @@ while ((c=getchar())!=EOF)
 
 return 0;
 }
-```
+
 
 2. 
 
-```c
+
 
 #include <stdio.h>
 #include <math.h>
@@ -38,11 +38,11 @@ printf("---------------------\n");
 
 return 0;
 }
-```
+
 
 3.
 
-```c
+
 #include <stdio.h>
 
 int main() {
@@ -67,11 +67,10 @@ for (a = 1; a <= 500; a++) {
 return 0;
 }
 
-```
+
 
 4.
 
-```c
 #include <stdio.h>
 
 int main() {
@@ -104,6 +103,6 @@ printf("-----------------------\n");
 return 0;
 }
 
-```
+
 
 http://wbzyl.inf.ug.edu.pl/c/elementarz-3
