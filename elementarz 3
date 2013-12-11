@@ -1,0 +1,109 @@
+1.
+
+```c
+#include <stdio.h>
+
+int main() {
+
+int c;
+
+while ((c=getchar())!=EOF)
+  if (c == '\t')
+    printf("\\t");
+  else if (c == '\\')
+    printf("\\\\");
+  else
+  putchar(c);
+
+return 0;
+}
+```
+
+2. 
+
+```c
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+int liczba = 0;
+
+printf("_____________________\n");
+for (liczba; liczba <= 20; liczba++){
+  printf("| %d\t|\t%3.2f|\n", liczba, sqrt(liczba));
+}
+printf("---------------------\n");
+
+return 0;
+}
+```
+
+3.
+
+```c
+#include <stdio.h>
+
+int main() {
+
+int a, b, c;
+
+for (a = 1; a <= 500; a++) {
+  for (b = 1; b <= 500; b++) {
+    for (c = 1; c <= 500; c++) {
+
+      if ((a*a+b*b == c*c) || (a*a+c*c == b*b) || (b*b+c*c == a*a)) {
+        if (a+b+c <= 1000) {
+         printf("Trojkat o bokach %d\t%d\t%d\n", a, b, c);
+        }
+      }
+
+    }
+  }
+}
+
+
+return 0;
+}
+
+```
+
+4.
+
+```c
+#include <stdio.h>
+
+int main() {
+
+int c=0, i, licznik, tabelka[256];
+
+//czyszczenie tablicy
+for (i = 0; i<=255; i++) {
+  tabelka[i] = 0;
+}
+
+//czytanie
+while ((c=getchar())!=EOF) {
+  tabelka[c]++;
+}
+
+//liczenie i formatowanie w tabelke
+printf("\nznak\tliczba znakow\n-----------------------\n");
+for (i = 32; i<=255; i++) {
+  if (tabelka[i] > 0) {
+    printf("%c\t%d\t", i, tabelka[i]);
+    for(licznik = 1; licznik <= tabelka[i]; licznik++) {
+       printf("*");
+    }
+    printf("\n");
+  }
+}
+printf("-----------------------\n");
+
+return 0;
+}
+
+```
+
+http://wbzyl.inf.ug.edu.pl/c/elementarz-3
